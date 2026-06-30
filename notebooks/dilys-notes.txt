@@ -47,3 +47,13 @@
 * DEATHS_INDIRECT > Ravi
 * DAMAGE_PROPERTY > Lianys
 * DAMAGE_CROPS > Lianys
+
+=========== 06/23/2026 - meeting with Mandy
+--- Mandy wonders whether using points (lat, long) is what's helpful. But 
+
+=========== 06/26/2026
+Using radar distance as hopefully a more predictive feature 
+--- halversine formula: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.haversine_distances.html 
+
+Use RFE to help with feature ranking 
+https://scikit-learn.org/stable/auto_examples/feature_selection/plot_rfe_digits.html
