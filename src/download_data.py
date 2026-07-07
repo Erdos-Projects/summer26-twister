@@ -1,11 +1,9 @@
 """
-Download all raw data for the tornado radar placement analysis.
+Download all raw data for the tornado analysis.
 
 Sources:
   - NOAA Storm Events details CSVs (1990–2025)
   - NEXRAD WSR-88D site list (NWS radar API)
-  - US Census 2020 county population estimates
-  - Census TIGER simplified county boundaries (20m)
 """
 
 import os
@@ -21,13 +19,6 @@ os.makedirs(RAW, exist_ok=True)
 
 STORM_EVENTS_BASE = "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/"
 NEXRAD_API = "https://api.weather.gov/radar/stations"
-CENSUS_POP_URL = (
-    "https://www2.census.gov/programs-surveys/popest/datasets/"
-    "2020-2023/counties/totals/co-est2023-alldata.csv"
-)
-TIGER_COUNTY_URL = (
-    "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_20m.zip"
-)
 
 
 def _download(url, dest, desc=""):
@@ -105,30 +96,10 @@ def download_nexrad_sites():
     return dest
 
 
-def download_census_population():
-    print("\n=== Census Population ===")
-    dest = RAW + "/co-est2023-alldata.csv"
-    return _download(CENSUS_POP_URL, dest, "Census county population estimates 2020-2023")
-
-
-def download_tiger_counties():
-    print("\n=== TIGER County Boundaries ===")
-    zip_dest = RAW + "/cb_2020_us_county_20m.zip"
-    _download(TIGER_COUNTY_URL, zip_dest, "TIGER county shapefile (20m)")
-    shp_dir = RAW + "/cb_2020_us_county_20m"
-    if not os.path.exists(shp_dir):
-        print(f"  Unzipping {os.path.basename(zip_dest)} ...", end=" ", flush=True)
-        shutil.unpack_archive(zip_dest, shp_dir)
-        print("done")
-    return shp_dir
-
-
 def main():
     print(f"Raw data directory: {os.path.abspath(RAW)}")
     download_storm_events()
     download_nexrad_sites()
-    download_census_population()
-    download_tiger_counties()
     print("\nAll data download complete.")
 
 
