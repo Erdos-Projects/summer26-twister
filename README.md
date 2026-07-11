@@ -1,5 +1,5 @@
-# TWISTER: Telling Where to Increase, StrengThen, and Expand Radars
-Data analysis pipeline to identify where the addition of new NEXRAD weather radars would fill coverage gaps and assist in early warnings of tornado producing storms in the future.
+# TWISTER: Tornado evolution WIth Season and TERrain
+Data analysis pipeline to identify trends in NOAA storm event data serving to increase human safety from tornado events.
 
 ## **Background** 
 
@@ -7,7 +7,7 @@ Tornados are a highly damaging and dangerous weather phenomenon that appear with
 
 ## **Goal** 
 
-Identify where new NEXRAD-class weather radars would most reduce the risk of unwarned tornado strikes on populated areas.
+Identify whether there are underserved regions in radar coverage. Determine if tornado alley has shifted in time and location.
 
 ## **Strategy** 
 
