@@ -31,6 +31,9 @@ The notebook titled data-preprocessing.ipynb cleans up the storm event data, rem
 
 EDA-KDE-humanimpact.ipynb contains exploratory data analysis looking for trends in the various features available in the tornado storm events. When exploring dozens of potential parameter correlations and various ML models, the only non-obvious trend emerging from the data was with the time evolution of number and location of tornado events.
 
+### **Coverage Maps**
+To download the NEXRAD coverage maps data, run `python src/download_nexrad_coverage.py` from the top-level directory. This produces a shapefile of NEXRAD coverage maps. Then, plot the data by running `python src/plot_radar_coverage.py`. 
+
 ### **Model Construction** 
 
 radar_distance_casulaties.ipynb - contains a model predicting human impact from tornado storm events. Found that EF scale is the best predictor (obvious result) then geography. Radar distance does not predict human casualties.
@@ -44,7 +47,6 @@ seasons_EFscale_year.ipynb - contains linear and non-parametric regression model
 Summary plots can be found in the plots directory.
 
 ### Dependencies
-Users can re-run this entire repo using anaconda by setting up the environment contained in the environment.yml.
-
+Users can re-run this entire repo by setting up the environment contained in the environment.yml. Simply run `conda env create -f environment.yml` and activate the environment with `conda activate twister`
 
 
