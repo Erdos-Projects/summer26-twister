@@ -3,7 +3,7 @@ Data analysis pipeline to identify trends in NOAA storm event data serving to in
 
 ## **Background** 
 
-Tornados are a highly damaging and dangerous weather phenomenon that appear with minimal warning beforehand. Alerts for potential tornadoes from the National Weather Service are highly dependent on reading the output from radars all across the country. To ensure these alerts are received by affected parties in a timely manner, high quality and high coverage data is a necessity. Unfortunately the coverage by available WSR-88D radars is limited in some areas where, historically, damaging tornadoes are more common. Identifying these high-risk low-coverage areas and installing new weather radars can increase the likelihood that the National Weather Service can issue alerts accurately and save lives.
+Tornados are a highly damaging and dangerous weather phenomenon that appear with minimal warning beforehand. Alerts for potential tornadoes from the National Weather Service are highly dependent on reading the output from radars all across the country. To ensure these alerts are received by affected parties in a timely manner, high quality and high coverage data is a necessity. Unfortunately the coverage by available WSR-88D radars is limited in some areas where, historically, damaging tornadoes are more common. Identifying high-risk low-coverage areas can inform where and how efforts should be focues to increase tornado safety.
 
 ## **Goal** 
 
