@@ -33,6 +33,8 @@ EDA-KDE-humanimpact.ipynb contains exploratory data analysis looking for trends 
 
 ### **Model Construction** 
 
+radar_distance_casulaties.ipynb - contains a model predicting human impact from tornado storm events. Found that EF scale is the best predictor (obvious result) then geography. Radar distance does not predict human casualties.
+
 tornado_alley_time_evolution.ipynb - contains the longitudinal time evolution quantile regression model. This model finds that while the eastern edge of tornado alley is not shifting with time, the western edge is shifting east-wards. This shows that the concentration of tornadoes is shifting east with time and will continue to do so in the future.
 
 seasons_EFscale_year.ipynb - contains linear and non-parametric regression models of the number of tornadoes and how this evolves with time. These models explore how these trends vary overall, with season, and with ef scale. The main findings from this analysis show that the overall number of tornado events is increasing with year. Furthermore, there appears to be a larger increase in the number of tornado events in spring and winter (December through May) as opposed to summer and autumn (June through November).
